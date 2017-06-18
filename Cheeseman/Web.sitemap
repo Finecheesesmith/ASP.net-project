@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx?id=1" title="Home" description="Home">
+    <siteMapNode url="~/Default.aspx" title="Home"/>
+    <siteMapNode url="~/About.aspx" title="About"/>
+    <siteMapNode url="~/Week2.aspx" title="Week 2">
+      <siteMapNode url="~/Week2FeedbackForm.aspx" title="Feedback Form" />
+      <siteMapNode url="~/Week2OrderForm.aspx" title="Card Maker Order Form" />
+      <siteMapNode url="~/Week2LoginForm.aspx"
+          title="Login Registration Form" />
+      <siteMapNode url="~/Week2Results.aspx" title="Form Results" />
+    </siteMapNode>
+    <siteMapNode url="~/Week3.aspx" title="Week 3">
+      <siteMapNode url="~/Week3RequiredIsValid.aspx"
+        title="IsValid and RequiredFieldValidator" />
+      <siteMapNode url="~/Week3ComparePasswords.aspx"
+        title="Validate Passwords" />
+      <siteMapNode url="~/Week3CompareDates.aspx" title="Date Validation" />
+      <siteMapNode url="~/Week3RegularExpressions.aspx"
+        title="Regular Expressions" />
+      <siteMapNode url="~/Week3SelectMultipleDates.aspx"
+        title="Select Multiple Dates" />
+      <siteMapNode url="~/Week3InsertStaticContent.aspx"
+        title="Insert Static Content in Calendar" />
+      <siteMapNode url="~/Week3BasicAdRotator.aspx" title="Basic Ad Rotator" />
+      <siteMapNode url="~/Week3SiteMapPath.aspx" title="SiteMapPath" />
+      <siteMapNode url="~/Week3Menu.aspx" title="Menu" />
+      <siteMapNode url="~/Week3TreeView.aspx" title="TreeView" />
+    </siteMapNode>
+    <siteMapNode url="~/Week4.aspx" title="Week 4">
+      <siteMapNode url="~/Week4ServerVariables.aspx" title="Using Server Variables" />
+      <siteMapNode url="~/Week4Sessions.aspx" title="Using Session Variables" />
+      <siteMapNode url="~/Week4Cookies.aspx" title="Reading and Writing Cookies" />
+      <siteMapNode url="~/Week4Trace.aspx" title="Configuring Trace" />
+      <siteMapNode url="~/Week4Browser.aspx" title="Browser Versions" />
+    </siteMapNode>
+    <siteMapNode url="~/Week5.aspx" title="Week 5"></siteMapNode>
+    <siteMapNode url="~/Week6.aspx" title="Week 6"></siteMapNode>
+    <siteMapNode url="~/Week7.aspx" title="Week 7"></siteMapNode>
+    <siteMapNode url="~/Week8.aspx" title="Week 8"></siteMapNode>
+  </siteMapNode>
+</siteMap>

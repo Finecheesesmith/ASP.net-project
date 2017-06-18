@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Store>
+  <Products Category="Shirts">
+    <Options Value="White" />
+    <Options Value="Green" />
+    <Options Value="Brown" />
+    <Options Value="Blue" />
+    <Options Value="Black" />
+  </Products>
+  <Products Category="Pants">
+    <Options Value="White" />
+    <Options Value="Green" />
+    <Options Value="Brown" />
+    <Options Value="Blue" />
+    <Options Value="Black" />
+  </Products>
+  <Products Category="Shoes">
+    <Options Value="Nike" />
+    <Options Value="Adidas" />
+    <Options Value="Reebok" />
+  </Products>
+  <Products Category="Jewelry">
+    <Options Value="Ring" />
+    <Options Value="Bracelet" />
+    <Options Value="Necklace" />
+  </Products>
+</Store>

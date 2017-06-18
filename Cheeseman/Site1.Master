@@ -1,0 +1,105 @@
+﻿<%--
+Designer: Michael Cheeseman
+Page Name: Site1.Master
+Last Edit: April 24, 2014
+--%>
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.Master.cs" Inherits="Cheeseman.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Michael Cheeseman</title>
+    <meta name="kewords" content="Irish, Ireland, Gaelic, castle, island" />
+    <meta name="description" content="My site is about Ireland." />
+    <asp:ContentPlaceHolder ID="Heading" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    My ASP.NET Application
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                        ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold">
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                        </span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/" />
+                        ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
+                        <asp:MenuItem NavigateUrl="~/Week2.aspx" Text="Week 2">
+                            <asp:MenuItem NavigateUrl="~/Week2FeedbackForm.aspx" Text="Feedback Form" />
+                            <asp:MenuItem NavigateUrl="~/Week2OrderForm.aspx" Text="Card Maker Order Form" />
+                            <asp:MenuItem NavigateUrl="~/Week2LoginForm.aspx" Text="Login Registration Form" />
+                            <asp:MenuItem NavigateUrl="~/Week2Results.aspx" Text="Form Results" />
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Week3.aspx" Text="Week 3">
+                            <asp:MenuItem NavigateUrl="~/Week3RequiredIsValid.aspx" Text="IsValid and RequiredFieldValidator" />
+                            <asp:MenuItem NavigateUrl="~/Week3ComparePasswords.aspx" Text="Validate Passwords" />
+                            <asp:MenuItem NavigateUrl="~/Week3CompareDates.aspx" Text="Date Validation" />
+                            <asp:MenuItem NavigateUrl="~/Week3RegularExpressions.aspx" Text="Regular Expressions" />
+                            <asp:MenuItem NavigateUrl="~/Week3SelectMultipleDates.aspx" Text="Select Multiple Dates" />
+                            <asp:MenuItem NavigateUrl="~/Week3InsertStaticContent.aspx" Text="Insert Static Content in Calendar" />
+                            <asp:MenuItem NavigateUrl="~/Week3BasicAdRotator.aspx" Text="Basic Ad Rotator" />
+                            <asp:MenuItem NavigateUrl="~/Week3SiteMapPath.aspx" Text="SiteMapPath" />
+                            <asp:MenuItem NavigateUrl="~/Week3Menu.aspx" Text="Menu" />
+                            <asp:MenuItem NavigateUrl="~/Week3TreeView.aspx" Text="TreeView" />
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Week4.aspx" Text="Week 4">
+                            <asp:MenuItem NavigateUrl="~/Week4ServerVariables.aspx" Text="Reading Server Variables" />
+                            <asp:MenuItem NavigateUrl="~/Week4Sessions.aspx" Text="Using Session Variables" />
+                            <asp:MenuItem NavigateUrl="~/Week4Cookies.aspx" Text="Reading and Writing Cookies" />
+                            <asp:MenuItem NavigateUrl="~/Week4Trace.aspx" Text="Configuring Trace" />
+                            <asp:MenuItem NavigateUrl="~/Week4Browsers.aspx" Text="Browser Versions" />
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Week5.aspx" Text="Week 5">
+                            <asp:MenuItem NavigateUrl="~/Week5AjaxControlToolkit.aspx" Text="AJAX Control Toolkit" />
+                            <asp:MenuItem NavigateUrl="~/Week5WebForm7.aspx" Text="WebForm 7" />
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Week6.aspx" Text="Week 6">
+                            <asp:MenuItem NavigateUrl="~/Week6DatabaseInfo.aspx" Text="Database Information" />
+                            <asp:MenuItem NavigateUrl="~/Week6Discussion6_3.aspx" Text="Grid View" />
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Week7.aspx" Text="Week 7">
+                            <asp:MenuItem NavigateUrl="~/Week7Discussion7-2.aspx" Text="Database Information" />
+                            <asp:MenuItem NavigateUrl="~/Week7Discussion7-3.aspx" Text="Grid View" />
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Week8.aspx" Text="Week 8">
+                            <asp:MenuItem NavigateUrl="~/Week8Discussion8_2.aspx" Text="Web Services Hello" />
+                            <asp:MenuItem NavigateUrl="~/Week8Discussion8-3.aspx" Text="Grid View" />
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Database.aspx" Text="postgres Database"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="Main" runat="server" />
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+</body>
+</html>

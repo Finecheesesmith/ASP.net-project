@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+<Ad>
+  <ImageUrl>~/Images/darkbluecar.png</ImageUrl>
+  <NavigateUrl>~/Week3BasicAdRotator.aspx?id=darkbluecar.png</NavigateUrl>
+  <AlternateText>Dark Blue Car</AlternateText>
+  <Impressions>10</Impressions>
+  <Keyword>Cool Cars</Keyword>
+</Ad>
+<Ad>
+  <ImageUrl>~/Images/greencar.jpg</ImageUrl>
+  <NavigateUrl>~/Week3BasicAdRotator.aspx?id=greencar.jpg</NavigateUrl>
+  <AlternateText>Green Car</AlternateText>
+  <Impressions>10</Impressions>
+  <Keyword>New Cars</Keyword>
+</Ad>
+<Ad>
+  <ImageUrl>~/Images/lightbluecar.png</ImageUrl>
+  <NavigateUrl>~/Week3BasicAdRotator.aspx?id=lightbluecar.png</NavigateUrl>
+  <AlternateText>Light Blue Car</AlternateText>
+  <Impressions>10</Impressions>
+  <Keyword>Old Cars</Keyword>
+</Ad>
+<Ad>
+  <ImageUrl>~/Images/pinkcar.png</ImageUrl>
+  <NavigateUrl>~/Week3BasicAdRotator.aspx?id=pinkcar.png</NavigateUrl>
+  <AlternateText>Pink Car</AlternateText>
+  <Impressions>10</Impressions>
+  <Keyword>Cool Cars</Keyword>
+</Ad>
+<Ad>
+  <ImageUrl>~/Images/redcar.png</ImageUrl>
+  <NavigateUrl>~/Week3BasicAdRotator.aspx?id=redcar.png</NavigateUrl>
+  <AlternateText>Red Car</AlternateText>
+  <Impressions>10</Impressions>
+  <Keyword>New Cars</Keyword>
+</Ad>
+<Ad>
+  <ImageUrl>~/images/redcarpresent.jpg</ImageUrl>
+  <NavigateUrl>~/Week3BasicAdRotator.aspx?id=redcarpresent.jpg</NavigateUrl>
+  <AlternateText>Red Car Present</AlternateText>
+  <Impressions>10</Impressions>
+  <Keyword>Cool Cars</Keyword>
+</Ad>
+<Ad>
+  <ImageUrl>~/images/redwhitecar.jpg</ImageUrl>
+  <NavigateUrl>~/Week3BasicAdRotator.aspx?id=redwhitecar.jpg</NavigateUrl>
+  <AlternateText>Red and White Car</AlternateText>
+  <Impressions>10</Impressions>
+  <Keyword>Old Cars</Keyword>
+</Ad>
+<Ad>
+  <ImageUrl>~/Images/yellowcar.png</ImageUrl>
+  <NavigateUrl>~/Week3BasicAdRotator.aspx?id=yellowcar.png</NavigateUrl>
+  <AlternateText>Yellow Car</AlternateText>
+  <Impressions>10</Impressions>
+  <Keyword>Old Cars</Keyword>
+</Ad>
+<Ad>
+  <ImageUrl>~/Images/yellowconvertable.png</ImageUrl>
+  <NavigateUrl>~/Week3BasicAdRotator.aspx?id=yellowconvertable.png</NavigateUrl>
+  <AlternateText>Yellow Car Convertible</AlternateText>
+  <Impressions>10</Impressions>
+  <Keyword>Cool Cars</Keyword>
+</Ad>
+</Advertisements>

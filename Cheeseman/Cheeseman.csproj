@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44F34671-15B7-41B6-BF48-075F2B311038}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cheeseman</RootNamespace>
+    <AssemblyName>Cheeseman</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.7.0123\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Devart.Data, Version=5.0.1555.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <HintPath>..\packages\dotConnect.Express.for.PostgreSQL.7.6.763\lib\Devart.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Devart.Data.Linq, Version=4.6.1199.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.PostgreSql, Version=7.6.763.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <HintPath>..\packages\dotConnect.Express.for.PostgreSQL.7.6.763\lib\Devart.Data.PostgreSql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Devart.Data.PostgreSql.Linq, Version=4.6.1199.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\AjaxControlToolkit.7.0123\lib\40\SanitizerProviders\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SanitizerProviders">
+      <HintPath>..\packages\AjaxControlToolkit.7.0123\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="App_Data\ASPNETDB.MDF" />
+    <Content Include="App_Data\ASPNETDB_log.ldf">
+      <DependentUpon>ASPNETDB.MDF</DependentUpon>
+    </Content>
+    <Content Include="App_Data\Cheeseman1.accdb" />
+    <Content Include="App_Themes\Default\styles.css" />
+    <Content Include="bin\Cheeseman.dll" />
+    <Content Include="bin\Cheeseman.pdb" />
+    <Content Include="Cheeseman.Publish.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Default.aspx" />
+    <Content Include="Discussion8_2WebService.asmx" />
+    <Content Include="Images\calen.png" />
+    <Content Include="Images\greencar.jpg" />
+    <Content Include="Images\lightbluecar.png" />
+    <Content Include="Images\pinkcar.png" />
+    <Content Include="Images\redcar.png" />
+    <Content Include="Images\darkbluecar.png" />
+    <Content Include="Images\redcarpresent.jpg" />
+    <Content Include="Images\redwhitecar.jpg" />
+    <Content Include="Images\yellowcar.png" />
+    <Content Include="Images\yellowconvertable.png" />
+    <Content Include="obj\Debug\Cheeseman.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Cheeseman.dll" />
+    <Content Include="obj\Debug\Cheeseman.pdb" />
+    <Content Include="obj\Debug\TempPE\Week7DSCustomerInfo.Designer.cs.dll" />
+    <Content Include="obj\Release\TempPE\Week7DSCustomerInfo.Designer.cs.dll" />
+    <Content Include="obj\Release\TempPE\Week7DSProducts1.Designer.cs.dll" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Database.aspx" />
+    <Content Include="Week3.aspx" />
+    <Content Include="Week3BasicAdRotator.aspx" />
+    <Content Include="Week3CompareDates.aspx" />
+    <Content Include="Week3ComparePasswords.aspx" />
+    <Content Include="Week3InsertStaticContent.aspx" />
+    <Content Include="Week3Menu.aspx" />
+    <Content Include="Week3RegularExpressions.aspx" />
+    <Content Include="Week3RequiredIsValid.aspx" />
+    <Content Include="Week3SelectMultipleDates.aspx" />
+    <Content Include="Week3SiteMapPath.aspx" />
+    <Content Include="Week3Store.xml" />
+    <Content Include="Week3TreeView.aspx" />
+    <Content Include="Week4.aspx" />
+    <Content Include="Week2.aspx" />
+    <Content Include="Week2FeedbackForm.aspx" />
+    <Content Include="Week2LoginForm.aspx" />
+    <Content Include="Week2OrderForm.aspx" />
+    <Content Include="Week2Results.aspx" />
+    <Content Include="Week4Browsers.aspx" />
+    <Content Include="Week4Cookies.aspx" />
+    <Content Include="Week4ServerVariables.aspx" />
+    <Content Include="Week4Sessions.aspx" />
+    <Content Include="Week4Trace.aspx" />
+    <Content Include="Week5.aspx" />
+    <Content Include="Week5AjaxControlToolkit.aspx" />
+    <Content Include="Week5WebForm7.aspx" />
+    <Content Include="Week6.aspx" />
+    <Content Include="Week6DatabaseInfo.aspx" />
+    <Content Include="Week6Discussion6_3.aspx" />
+    <Content Include="Week7.aspx" />
+    <Content Include="Week7Discussion7-2.aspx" />
+    <Content Include="Week7Discussion7-3.aspx" />
+    <Content Include="Week8.aspx" />
+    <Content Include="Week8Discussion8-3.aspx" />
+    <Content Include="Week8Discussion8_2.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Discussion8_2WebService.asmx.cs">
+      <DependentUpon>Discussion8_2WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Images\DataContext1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataContext1.lqml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Database.aspx.cs">
+      <DependentUpon>Database.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database.aspx.designer.cs">
+      <DependentUpon>Database.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week3.aspx.cs">
+      <DependentUpon>Week3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week3.aspx.designer.cs">
+      <DependentUpon>Week3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week3BasicAdRotator.aspx.cs">
+      <DependentUpon>Week3BasicAdRotator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week3BasicAdRotator.aspx.designer.cs">
+      <DependentUpon>Week3BasicAdRotator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week3CompareDates.aspx.cs">
+      <DependentUpon>Week3CompareDates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week3CompareDates.aspx.designer.cs">
+      <DependentUpon>Week3CompareDates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week3ComparePasswords.aspx.cs">
+      <DependentUpon>Week3ComparePasswords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week3ComparePasswords.aspx.designer.cs">
+      <DependentUpon>Week3ComparePasswords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week3InsertStaticContent.aspx.cs">
+      <DependentUpon>Week3InsertStaticContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week3InsertStaticContent.aspx.designer.cs">
+      <DependentUpon>Week3InsertStaticContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week3Menu.aspx.cs">
+      <DependentUpon>Week3Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week3Menu.aspx.designer.cs">
+      <DependentUpon>Week3Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week3RegularExpressions.aspx.cs">
+      <DependentUpon>Week3RegularExpressions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week3RegularExpressions.aspx.designer.cs">
+      <DependentUpon>Week3RegularExpressions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week3RequiredIsValid.aspx.cs">
+      <DependentUpon>Week3RequiredIsValid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week3RequiredIsValid.aspx.designer.cs">
+      <DependentUpon>Week3RequiredIsValid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week3SelectMultipleDates.aspx.cs">
+      <DependentUpon>Week3SelectMultipleDates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week3SelectMultipleDates.aspx.designer.cs">
+      <DependentUpon>Week3SelectMultipleDates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week3SiteMapPath.aspx.cs">
+      <DependentUpon>Week3SiteMapPath.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week3SiteMapPath.aspx.designer.cs">
+      <DependentUpon>Week3SiteMapPath.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week3TreeView.aspx.cs">
+      <DependentUpon>Week3TreeView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week3TreeView.aspx.designer.cs">
+      <DependentUpon>Week3TreeView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week4.aspx.cs">
+      <DependentUpon>Week4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week4.aspx.designer.cs">
+      <DependentUpon>Week4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week2.aspx.cs">
+      <DependentUpon>Week2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week2.aspx.designer.cs">
+      <DependentUpon>Week2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week2FeedbackForm.aspx.cs">
+      <DependentUpon>Week2FeedbackForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week2FeedbackForm.aspx.designer.cs">
+      <DependentUpon>Week2FeedbackForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week2LoginForm.aspx.cs">
+      <DependentUpon>Week2LoginForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week2LoginForm.aspx.designer.cs">
+      <DependentUpon>Week2LoginForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week2OrderForm.aspx.cs">
+      <DependentUpon>Week2OrderForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week2OrderForm.aspx.designer.cs">
+      <DependentUpon>Week2OrderForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week2Results.aspx.cs">
+      <DependentUpon>Week2Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week2Results.aspx.designer.cs">
+      <DependentUpon>Week2Results.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week4Browsers.aspx.cs">
+      <DependentUpon>Week4Browsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week4Browsers.aspx.designer.cs">
+      <DependentUpon>Week4Browsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week4Cookies.aspx.cs">
+      <DependentUpon>Week4Cookies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week4Cookies.aspx.designer.cs">
+      <DependentUpon>Week4Cookies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week4ServerVariables.aspx.cs">
+      <DependentUpon>Week4ServerVariables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week4ServerVariables.aspx.designer.cs">
+      <DependentUpon>Week4ServerVariables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week4Sessions.aspx.cs">
+      <DependentUpon>Week4Sessions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week4Sessions.aspx.designer.cs">
+      <DependentUpon>Week4Sessions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week4Trace.aspx.cs">
+      <DependentUpon>Week4Trace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week4Trace.aspx.designer.cs">
+      <DependentUpon>Week4Trace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week5.aspx.cs">
+      <DependentUpon>Week5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week5.aspx.designer.cs">
+      <DependentUpon>Week5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week5AjaxControlToolkit.aspx.cs">
+      <DependentUpon>Week5AjaxControlToolkit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week5AjaxControlToolkit.aspx.designer.cs">
+      <DependentUpon>Week5AjaxControlToolkit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week5WebForm7.aspx.cs">
+      <DependentUpon>Week5WebForm7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week5WebForm7.aspx.designer.cs">
+      <DependentUpon>Week5WebForm7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week6.aspx.cs">
+      <DependentUpon>Week6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week6.aspx.designer.cs">
+      <DependentUpon>Week6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week6DatabaseInfo.aspx.cs">
+      <DependentUpon>Week6DatabaseInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week6DatabaseInfo.aspx.designer.cs">
+      <DependentUpon>Week6DatabaseInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week6Discussion6_3.aspx.cs">
+      <DependentUpon>Week6Discussion6_3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week6Discussion6_3.aspx.designer.cs">
+      <DependentUpon>Week6Discussion6_3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week7.aspx.cs">
+      <DependentUpon>Week7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week7.aspx.designer.cs">
+      <DependentUpon>Week7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week7Discussion7-2.aspx.cs">
+      <DependentUpon>Week7Discussion7-2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week7Discussion7-2.aspx.designer.cs">
+      <DependentUpon>Week7Discussion7-2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week7Discussion7-3.aspx.cs">
+      <DependentUpon>Week7Discussion7-3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week7Discussion7-3.aspx.designer.cs">
+      <DependentUpon>Week7Discussion7-3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week7DSCustomerInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Week7DSCustomerInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Week8.aspx.cs">
+      <DependentUpon>Week8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week8.aspx.designer.cs">
+      <DependentUpon>Week8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week8Discussion8-3.aspx.cs">
+      <DependentUpon>Week8Discussion8-3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week8Discussion8-3.aspx.designer.cs">
+      <DependentUpon>Week8Discussion8-3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Week8Discussion8_2.aspx.cs">
+      <DependentUpon>Week8Discussion8_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Week8Discussion8_2.aspx.designer.cs">
+      <DependentUpon>Week8Discussion8_2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\MyTheme\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\Label.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site1.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Week3Ads.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\DataContext1.Diagram1.view">
+      <DependentUpon>DataContext1.lqml</DependentUpon>
+    </None>
+    <None Include="Images\DataContext1.edps">
+      <DependentUpon>DataContext1.lqml</DependentUpon>
+    </None>
+    <None Include="Images\DataContext1.lqml">
+      <Generator>DevartLinqToSqlGenerator</Generator>
+      <LastGenOutput>DataContext1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="obj\Debug\Cheeseman.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Week7DSCustomerInfo.xsc">
+      <DependentUpon>Week7DSCustomerInfo.xsd</DependentUpon>
+    </None>
+    <None Include="Week7DSCustomerInfo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Week7DSCustomerInfo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Week7DSCustomerInfo.xss">
+      <DependentUpon>Week7DSCustomerInfo.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51586</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

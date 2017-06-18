@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="dvdrental" EntityNamespace="DvdrentalContext" ContextNamespace="DvdrentalContext" Class="DvdrentalDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="83201916-af25-4a31-bcee-8f2c54a20ea6" Provider="Devart.Data.PostgreSql.Linq.Provider.PgSqlDataProvider, Devart.Data.PostgreSql.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=postgres;Host=localhost;Database=dvdrental;Initial Schema=public" Provider="Devart.Data.PostgreSql" />
+  <Table Name="public.staff" Member="Staffs">
+    <Type Name="Staff" ed:Guid="b35b184b-a6ec-4388-9b69-8fae0f3eb729">
+      <Column Name="staff_id" Member="StaffId" Type="System.Int32" DbType="INT4 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="nextval('staff_staff_id_seq'::regclass)" ed:ValidateRequired="true" ed:Guid="b90dc800-afd3-45c6-9dfc-5302102b56e7" />
+      <Column Name="first_name" Member="FirstName" Type="System.String" DbType="VARCHAR(45) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="45" Unicode="true" ed:ValidateMaxLength="45" ed:ValidateRequired="true" ed:Guid="f3cf6eb6-fcfa-43a5-8d84-6bcd911525c7" />
+      <Column Name="last_name" Member="LastName" Type="System.String" DbType="VARCHAR(45) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="45" Unicode="true" ed:ValidateMaxLength="45" ed:ValidateRequired="true" ed:Guid="f884a17c-10a4-4d21-8475-cff7bb6f8fcb" />
+      <Column Name="address_id" Member="AddressId" Type="System.Int16" DbType="INT2 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="65a3c25c-9875-489a-aec1-ffb2b7efe7c1" />
+      <Column Name="email" Member="Email" Type="System.String" DbType="VARCHAR(50)" CanBeNull="true" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="fb8924fa-abb0-461c-ad58-a0721fc296cd" />
+      <Column Name="store_id" Member="StoreId" Type="System.Int16" DbType="INT2 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="bb1fc51f-c61f-4396-b9b2-89e421296913" />
+      <Column Name="active" Member="Active" Type="System.Boolean" DbType="BOOL NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="true" ed:ValidateRequired="true" ed:Guid="6b0848a0-af36-400c-9e18-e40fcea02362" />
+      <Column Name="username" Member="Username" Type="System.String" DbType="VARCHAR(16) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="16" Unicode="true" ed:ValidateMaxLength="16" ed:ValidateRequired="true" ed:Guid="c3ed5fea-82b9-45ea-bc61-e50229d0e48b" />
+      <Column Name="&quot;password&quot;" Member="Password" Type="System.String" DbType="VARCHAR(40)" CanBeNull="true" UpdateCheck="Never" MaxLength="40" Unicode="true" ed:ValidateMaxLength="40" ed:ValidateRequired="false" ed:Guid="5cb4f944-c01c-47bc-b0e2-c568da65096a" />
+      <Column Name="last_update" Member="LastUpdate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="now()" ed:ValidateRequired="true" ed:Guid="fb7540da-ff23-43b9-8dea-3ddda7f4fe9a" />
+      <Column Name="picture" Member="Picture" Type="System.Byte[]" DbType="BYTEA" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="43b77ae0-de1c-4d15-a5ce-e0282c095031" />
+      <Association Name="Staff_Payment" ed:AssociationGuid="4e38030d-fd5f-44ce-ad0a-05b6dbeeb8dd" Member="Payments" ed:Guid="22309a0c-f353-4e4f-a0d8-20d2d95299d3" ThisKey="StaffId" OtherKey="StaffId" Type="Payment" />
+      <Association Name="Staff_Rental" ed:AssociationGuid="8865382e-b679-4d8f-928f-b71e90bb0abc" Member="Rentals" ed:Guid="744d3570-760d-4daa-a6cd-73506605713d" ThisKey="StaffId" OtherKey="StaffId" Type="Rental" />
+    </Type>
+  </Table>
+  <Table Name="public.category" Member="Categories">
+    <Type Name="Category" ed:Guid="024caed8-0e49-4db9-a078-0dfedbe44e79">
+      <Column Name="category_id" Member="CategoryId" Type="System.Int32" DbType="INT4 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="nextval('category_category_id_seq'::regclass)" ed:ValidateRequired="true" ed:Guid="e0e178d1-f91a-4c7c-9eed-6d08deeecf21" />
+      <Column Name="&quot;name&quot;" Member="Name" Type="System.String" DbType="VARCHAR(25) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="25" Unicode="true" ed:ValidateMaxLength="25" ed:ValidateRequired="true" ed:Guid="3b4b3654-2f3d-4f6f-9105-456870a48de4" />
+      <Column Name="last_update" Member="LastUpdate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="now()" ed:ValidateRequired="true" ed:Guid="037223c5-10ab-4554-83aa-bd8db63f11ef" />
+      <Association Name="Category_FilmCategory" ed:AssociationGuid="dc9212c9-e86d-42d0-933e-9f948a78e2fa" Member="FilmCategories" ed:Guid="4f9a6b2b-8397-4176-bae7-ddb38be39c34" ThisKey="CategoryId" OtherKey="CategoryId" Type="FilmCategory" />
+    </Type>
+  </Table>
+  <Table Name="public.film_category" Member="FilmCategories">
+    <Type Name="FilmCategory" ed:Guid="95b1dc32-5129-4d35-8add-835ea9cbd680">
+      <Column Name="film_id" Member="FilmId" Type="System.Int16" DbType="INT2 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="540944f3-20d2-4a62-b0df-40b0152906f8" />
+      <Column Name="category_id" Member="CategoryId" Type="System.Int32" DbType="INT2 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="2c66b054-7be8-4497-9be1-8e9e035a39bf" />
+      <Column Name="last_update" Member="LastUpdate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="now()" ed:ValidateRequired="true" ed:Guid="775683df-eba6-4676-a70e-16f07af70deb" />
+      <Association Name="Category_FilmCategory" ed:AssociationGuid="dc9212c9-e86d-42d0-933e-9f948a78e2fa" Member="Category" ed:Guid="ce61bb3c-1f52-4ec8-bc9c-1fde5a8433e4" ThisKey="CategoryId" OtherKey="CategoryId" Type="Category" DeleteRule="RESTRICT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="public.country" Member="Countries">
+    <Type Name="Country" ed:Guid="7d0398bd-68e3-4f89-a757-d03dc1fd9459">
+      <Column Name="country_id" Member="CountryId" Type="System.Int32" DbType="INT4 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="nextval('country_country_id_seq'::regclass)" ed:ValidateRequired="true" ed:Guid="3102baab-ead2-4b05-95f8-a33c5a697628" />
+      <Column Name="country" Member="Country1" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="6a62af4b-7c97-4aa5-bd70-002741d221ca" />
+      <Column Name="last_update" Member="LastUpdate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="now()" ed:ValidateRequired="true" ed:Guid="d68cf6fe-4b60-4df7-a4dc-ddb207fed4ff" />
+      <Association Name="Country_City" ed:AssociationGuid="3718f90f-559b-4943-8c38-964a204bdfb0" Member="Cities" ed:Guid="01927f2b-6a3b-4921-8468-1c9e40fe1361" ThisKey="CountryId" OtherKey="CountryId" Type="City" />
+    </Type>
+  </Table>
+  <Table Name="public.actor" Member="Actors">
+    <Type Name="Actor" ed:Guid="4f1649de-2659-4cb3-90ec-2fe95d6daada">
+      <Column Name="actor_id" Member="ActorId" Type="System.Int32" DbType="INT4 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="nextval('actor_actor_id_seq'::regclass)" ed:ValidateRequired="true" ed:Guid="ce3bfa91-3501-48f9-92f3-56d171888c70" />
+      <Column Name="first_name" Member="FirstName" Type="System.String" DbType="VARCHAR(45) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="45" Unicode="true" ed:ValidateMaxLength="45" ed:ValidateRequired="true" ed:Guid="bd88e9bd-d9e0-4725-962b-11acd0d22ab3" />
+      <Column Name="last_name" Member="LastName" Type="System.String" DbType="VARCHAR(45) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="45" Unicode="true" ed:ValidateMaxLength="45" ed:ValidateRequired="true" ed:Guid="aaf53b4c-fbcb-4519-8f00-d9ee67229025" />
+      <Column Name="last_update" Member="LastUpdate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="now()" ed:ValidateRequired="true" ed:Guid="d611680a-1a3d-428a-9c08-adbb1a870e9f" />
+    </Type>
+  </Table>
+  <Table Name="public.&quot;language&quot;" Member="Languages">
+    <Type Name="Language" ed:Guid="63c8c0d4-805f-4307-8dad-05918a5402e0">
+      <Column Name="language_id" Member="LanguageId" Type="System.Int32" DbType="INT4 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="nextval('language_language_id_seq'::regclass)" ed:ValidateRequired="true" ed:Guid="5566d457-bbfe-4e7b-9a3a-3d2f58e9e6f7" />
+      <Column Name="&quot;name&quot;" Member="Name" Type="System.String" DbType="CHAR(20) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="20" Unicode="true" ed:ValidateMaxLength="20" ed:ValidateRequired="true" ed:Guid="c8d9d31d-319d-432c-a0d0-f40e24c94533" />
+      <Column Name="last_update" Member="LastUpdate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="now()" ed:ValidateRequired="true" ed:Guid="6f3c6f2f-df9a-4b02-b4e5-83772c32d232" />
+    </Type>
+  </Table>
+  <Table Name="public.inventory" Member="Inventories">
+    <Type Name="Inventory" ed:Guid="3148ff98-db6f-42af-8c3d-e4f994e1c56b">
+      <Column Name="inventory_id" Member="InventoryId" Type="System.Int32" DbType="INT4 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="nextval('inventory_inventory_id_seq'::regclass)" ed:ValidateRequired="true" ed:Guid="f68ac74a-c020-442a-a5eb-9bd795cf5535" />
+      <Column Name="film_id" Member="FilmId" Type="System.Int16" DbType="INT2 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="480a4a1d-435d-46c7-b467-f18976e4d642" />
+      <Column Name="store_id" Member="StoreId" Type="System.Int16" DbType="INT2 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="8c209859-fcd8-476d-a2c2-32c30b7fc17f" />
+      <Column Name="last_update" Member="LastUpdate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="now()" ed:ValidateRequired="true" ed:Guid="99d2d7cd-f7f1-4943-ad88-30fe52dec0cc" />
+      <Association Name="Inventory_Rental" ed:AssociationGuid="11a6b11c-c16e-4391-b4a8-37d524835ef7" Member="Rentals" ed:Guid="091a0587-9cdc-4f25-9b47-c15043fa7807" ThisKey="InventoryId" OtherKey="InventoryId" Type="Rental" />
+    </Type>
+  </Table>
+  <Table Name="public.payment" Member="Payments">
+    <Type Name="Payment" ed:Guid="b273de35-53c9-4e28-93d3-88c8fcfd0936">
+      <Column Name="payment_id" Member="PaymentId" Type="System.Int32" DbType="INT4 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="nextval('payment_payment_id_seq'::regclass)" ed:ValidateRequired="true" ed:Guid="ad507ed7-b463-4881-8afe-3e7b0b6957dc" />
+      <Column Name="customer_id" Member="CustomerId" Type="System.Int16" DbType="INT2 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="f3562fa2-6f8b-44f1-a859-d7f7feee6910" />
+      <Column Name="staff_id" Member="StaffId" Type="System.Int32" DbType="INT2 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="48d96746-9262-474a-8fdc-ad3a3049eb48" />
+      <Column Name="rental_id" Member="RentalId" Type="System.Int32" DbType="INT4 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="17e07d5c-4125-413f-b706-c213f62bac68" />
+      <Column Name="amount" Member="Amount" Type="System.Decimal" DbType="NUMERIC(5,2) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="5" Scale="2" ed:ValidateRequired="true" ed:Guid="e11c8568-dae1-4998-95db-9404f9a586e1" />
+      <Column Name="payment_date" Member="PaymentDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="f2daab1d-16f7-42cb-8de7-1b3d75c747f2" />
+      <Association Name="Staff_Payment" ed:AssociationGuid="4e38030d-fd5f-44ce-ad0a-05b6dbeeb8dd" Member="Staff" ed:Guid="8ca750ff-71f6-4127-87e4-b6b5b3d53d66" ThisKey="StaffId" OtherKey="StaffId" Type="Staff" DeleteRule="RESTRICT" IsForeignKey="true" />
+      <Association Name="Rental_Payment" ed:AssociationGuid="3b7c5dd1-9e53-4483-9faa-3c2c43daf02f" Member="Rental" ed:Guid="c60ea59d-b773-4e4e-b345-339c8241af50" ThisKey="RentalId" OtherKey="RentalId" Type="Rental" DeleteRule="SET NULL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="public.rental" Member="Rentals">
+    <Type Name="Rental" ed:Guid="31de5688-ed61-4fc2-9d70-8362af7a8573">
+      <Column Name="rental_id" Member="RentalId" Type="System.Int32" DbType="INT4 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="nextval('rental_rental_id_seq'::regclass)" ed:ValidateRequired="true" ed:Guid="e896eecb-cd4a-43b8-b928-aa615ba8012a" />
+      <Column Name="rental_date" Member="RentalDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="75342604-c807-4034-8f4e-bdbad714ae16" />
+      <Column Name="inventory_id" Member="InventoryId" Type="System.Int32" DbType="INT4 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="597ae6a8-b5e2-49c3-8f67-95f42795f672" />
+      <Column Name="customer_id" Member="CustomerId" Type="System.Int16" DbType="INT2 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="67c3927e-fcaf-4ef7-b26a-165c1e551490" />
+      <Column Name="return_date" Member="ReturnDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="9bce9420-d7ca-4f6f-a555-b932064aaede" />
+      <Column Name="staff_id" Member="StaffId" Type="System.Int32" DbType="INT2 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="b2737d3e-f78e-4ab3-b360-034551ab86eb" />
+      <Column Name="last_update" Member="LastUpdate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="now()" ed:ValidateRequired="true" ed:Guid="5fc46723-e830-4409-b8a3-40e3d25d5c56" />
+      <Association Name="Staff_Rental" ed:AssociationGuid="8865382e-b679-4d8f-928f-b71e90bb0abc" Member="Staff" ed:Guid="57b7b599-2a2d-495c-aa98-0fb26bc500c4" ThisKey="StaffId" OtherKey="StaffId" Type="Staff" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Inventory_Rental" ed:AssociationGuid="11a6b11c-c16e-4391-b4a8-37d524835ef7" Member="Inventory" ed:Guid="5ee5e1f0-2424-4fa1-a1af-a4630429b6a6" ThisKey="InventoryId" OtherKey="InventoryId" Type="Inventory" DeleteRule="RESTRICT" IsForeignKey="true" />
+      <Association Name="Rental_Payment" ed:AssociationGuid="3b7c5dd1-9e53-4483-9faa-3c2c43daf02f" Member="Payments" ed:Guid="6437b229-4847-4f5c-827d-b102a1873ba1" ThisKey="RentalId" OtherKey="RentalId" Type="Payment" />
+    </Type>
+  </Table>
+  <Table Name="public.city" Member="Cities">
+    <Type Name="City" ed:Guid="6d1233c5-637a-4741-a464-8ccc42928e83">
+      <Column Name="city_id" Member="CityId" Type="System.Int32" DbType="INT4 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="nextval('city_city_id_seq'::regclass)" ed:ValidateRequired="true" ed:Guid="01b16800-00a0-46b8-919c-39566ac125bd" />
+      <Column Name="city" Member="City1" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="13594392-fcc8-4f43-a5ca-bcc9630e17b7" />
+      <Column Name="country_id" Member="CountryId" Type="System.Int32" DbType="INT2 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c67bba00-d17f-42e7-a984-effc29536e15" />
+      <Column Name="last_update" Member="LastUpdate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="now()" ed:ValidateRequired="true" ed:Guid="b435a0df-179b-4584-84ed-a1b614103cba" />
+      <Association Name="Country_City" ed:AssociationGuid="3718f90f-559b-4943-8c38-964a204bdfb0" Member="Country" ed:Guid="dac5d127-9de9-4e8b-b56b-5904befaf4a5" ThisKey="CountryId" OtherKey="CountryId" Type="Country" DeleteRule="NO ACTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
